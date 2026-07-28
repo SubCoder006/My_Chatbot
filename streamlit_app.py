@@ -86,8 +86,21 @@ def render_message(role, text):
     </div>
     """, unsafe_allow_html=True)
 
+robot_b64 = get_base64_image("assets/robo.png")
 
-st.title("My Chatbot")
+st.markdown(
+    f"""
+    <div style="text-align:center;">
+        <img src="data:image/png;base64,{robot_b64}" 
+             style="width:80px; height:80px; border-radius:50%;">
+        <h1>🤖 NexaBot</h1>
+        <p style="font-size:18px;color:gray;">
+            Powered by Groq AI 🚀
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 if "chat_service" not in st.session_state:
     memory = ConversationMemory()
