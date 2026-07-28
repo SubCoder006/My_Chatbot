@@ -4,10 +4,3 @@ python-dotenv
 # Groq LLM
 groq
 
-# Data handling
-pandas
-numpy
-
-# Optional utilities
-requests
-pydantic

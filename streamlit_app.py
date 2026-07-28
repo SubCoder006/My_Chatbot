@@ -42,10 +42,10 @@ st.markdown("""
     margin-right: auto;
 }
 .avatar img {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
 }
 .bubble {
     padding: 12px 16px;
@@ -86,12 +86,12 @@ def render_message(role, text):
     </div>
     """, unsafe_allow_html=True)
 
-robot_b64 = get_base64_image("assets/robo.png")
+header_robot_b64 = get_base64_image("assets/robo.png")
 
 st.markdown(
     f"""
     <div style="text-align:center;">
-        <img src="data:image/png;base64,{robot_b64}" 
+        <img src="data:image/png;base64,{header_robot_b64}" 
              style="width:80px; height:80px; border-radius:50%;">
         <h1>🤖 NexaBot</h1>
         <p style="font-size:18px;color:gray;">
