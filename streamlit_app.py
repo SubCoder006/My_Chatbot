@@ -28,11 +28,10 @@ st.set_page_config(page_title="My Chatbot", page_icon="assets/robot.png", layout
 st.markdown("""
 <style>
 .chat-row {
-    display: flex;
-    align-items: flex-end;
-    margin: 12px 0;
-    gap: 8px;
-    max-width: 80%;
+    display:flex;
+    align-items:flex-start;
+    margin:16px 0;
+    gap:10px;
 }
 .chat-row.user {
     flex-direction: row-reverse;
@@ -45,13 +44,13 @@ st.markdown("""
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    object-fit: contain;
+    object-fit: fit;
 }
 .bubble {
-    padding: 12px 16px;
-    border-radius: 16px;
-    line-height: 1.5;
-    color: white;
+    max-width:650px;
+    padding:14px 18px;
+    border-radius:18px;
+    line-height:1.6;
 }
 .bubble.user {
     background: linear-gradient(135deg, #7C3AED, #4F46E5);
