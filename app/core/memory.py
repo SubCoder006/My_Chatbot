@@ -1,22 +1,22 @@
 from app.config import SYSTEM_PROMPT, MAX_HISTORY_MESSAGES
-
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 class ConversationMemory:
     def __init__(self):
         self.messages = [
-            {"role": "system", "content": SYSTEM_PROMPT}
+            (SystemMessage(content=SYSTEM_PROMPT))
         ]
 
     def add_user_message(self, content):
-        self.messages.append({"role": "user", "content": content})
+        self.messages.append(HumanMessage(content=content))
 
     def add_assistant_message(self, content):
-        self.messages.append({"role": "assistant", "content": content})
+        self.messages.append(AIMessage(content=content))
         self._trim()
 
     def undo_last_user_message(self):
         # called when a request fails, so we don't keep a dangling unanswered message
-        if self.messages and self.messages[-1]["role"] == "user":
+        if self.messages and isinstance(self.messages[-1], HumanMessage) :
             self.messages.pop()
 
     def _trim(self):

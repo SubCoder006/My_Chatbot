@@ -4,3 +4,13 @@ python-dotenv
 # Groq LLM
 groq
 
+# Langchain
+langchain-groq
+langchain-core
+langchain-community
+langchain-huggingface
+
+# RAG
+pypdf
+faiss-cpu
+sentence-transformers
