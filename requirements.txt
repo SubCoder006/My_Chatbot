@@ -14,3 +14,10 @@ langchain-huggingface
 pypdf
 faiss-cpu
 sentence-transformers
+torchvision
+
+## Postgre
+psycopg2-binary
+
+## database
+supabase
