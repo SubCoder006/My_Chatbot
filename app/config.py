@@ -9,7 +9,7 @@ class Provider(str, Enum):
     OLLAMA = "ollama"
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "openai/gpt-oss-120b"
 MAX_TOKENS = 1500
 
 SYSTEM_PROMPT = (
