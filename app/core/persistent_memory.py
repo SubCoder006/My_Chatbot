@@ -90,7 +90,7 @@ class PersistentMemory:
             cur.execute("DELETE FROM messages WHERE id = %s", (row[0],))
             conn.commit()
         cur.close()
-        crelease_connection(conn)
+        release_connection(conn)
 
     def get_full_history(self):
         conn = get_connection()
