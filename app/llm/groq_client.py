@@ -8,7 +8,7 @@ llm = ChatGroq(
     model=MODEL,
     api_key=GROQ_API_KEY,
     max_retries=MAX_TOKENS,
-    reasoning_effort="none",
+    reasoning_effort="low",
 )
 
 prompt = ChatPromptTemplate.from_messages([
